@@ -50,8 +50,8 @@ public class Interfaz {
             }
     }
 
-    public void addVehiculo(String modelo, String marca, String color, int anioFabricacion, String combustion, double precioRecomendado){
-        Vehiculo coche = new Vehiculo(modelo, marca, color, anioFabricacion, combustion, precioRecomendado);
+    public void addVehiculo(String modelo, String marca, String color, int anioFabricacion, String combustion, String estado, double precioRecomendado){
+        Vehiculo coche = new Vehiculo(modelo, marca, color, anioFabricacion, combustion, estado, precioRecomendado);
         if (listVehiculo.isEmpty()) {
             listVehiculo.add(coche);
         } else {
@@ -134,9 +134,11 @@ public class Interfaz {
         int anioFabricacion = lectorTeclado.nextInt();
         System.out.println("Combustión(Gasolina | Gasoil): ");
         String combustion = lectorTeclado.next();
+        System.out.println("Estado(Disponible | No disponible): ");
+        String estado = lectorTeclado.next();
         System.out.println("Precio Recomendado: ");
         Double precioRecomendado = lectorTeclado.nextDouble();
-        addVehiculo(modelo, marca, color, anioFabricacion, combustion, precioRecomendado);
+        addVehiculo(modelo, marca, color, anioFabricacion, combustion, estado, precioRecomendado);
         //showVehiculos();
 
     }

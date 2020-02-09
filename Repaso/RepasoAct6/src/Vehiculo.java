@@ -5,15 +5,25 @@ public class Vehiculo {
     private String color;
     private int anioFabricacion;
     private String combustion;
+    private String estado;
     private double precioRecomendado;
 
-    public Vehiculo(String modelo, String marca, String color, int anioFabricacion, String combustion, double precioRecomendado) {
+    public Vehiculo(String modelo, String marca, String color, int anioFabricacion, String combustion, String estado, double precioRecomendado) {
         this.modelo = modelo;
         this.marca = marca;
         this.color = color;
         this.anioFabricacion = anioFabricacion;
         this.combustion = combustion;
+        this.estado = estado;
         this.precioRecomendado = precioRecomendado;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getModelo() {
@@ -71,6 +81,7 @@ public class Vehiculo {
                 ", color='" + color + '\'' +
                 ", anioFabricacion=" + anioFabricacion +
                 ", combustion='" + combustion + '\'' +
+                ", estado='" + estado + '\'' +
                 ", precioRecomendado=" + precioRecomendado;
     }
 }
